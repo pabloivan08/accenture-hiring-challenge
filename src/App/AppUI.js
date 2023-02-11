@@ -9,19 +9,29 @@ import { Header } from "../Header";
 const AppUI = (data) => {
 
   const data2 = data.data
+  const [searchedUser, setSearchedUser] = React.useState('')
+  const [newData, setNewData] = React.useState(data2)
+
+  let serachedValue = []
+  !searchedUser > 0 ? serachedValue = newData : serachedValue = newData.filter(post => post.userId == searchedUser)
+ 
   const imageAPI = 'url("https://source.unsplash.com/random")'
 
+  
   return(
     <React.Fragment>
-      {console.log(data2)}
       <Header />
       <CreatePostButton />
-      <UserPostSearch />
+      <UserPostSearch
+        searchedUser={searchedUser}
+        setSearchedUser={setSearchedUser}
+      />
       <FilterPosts />
       <PostsList>
-        {data2.map(post =>
+        {serachedValue.map(post =>
         <SinglePost 
           key={post.id}
+          userId={post.userId}
           title={post.title}
           description={post.body}
           image={imageAPI}

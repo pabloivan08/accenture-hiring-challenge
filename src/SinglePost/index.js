@@ -1,7 +1,7 @@
 import React from "react";
 import './SinglePost.css'
 
-const SinglePost = ({title, image, description}) => {
+const SinglePost = ({title, image, description, userId}) => {
 
   const randomImage = { backgroundImage: image }
 
@@ -12,7 +12,7 @@ const SinglePost = ({title, image, description}) => {
       </h2>
 
       <p className="comments-counter">
-        Number of Comments
+        User: {userId}
       </p>
 
       <p className="post-description">

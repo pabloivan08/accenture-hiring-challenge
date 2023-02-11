@@ -30,7 +30,6 @@ function App() {
     return <div>Loading...</div>
   }
 
-  const dataArray = data.toArray
   return (
     <AppUI 
       data={data}

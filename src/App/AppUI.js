@@ -7,21 +7,29 @@ import { FilterPosts } from "../FilterPosts";
 import { Header } from "../Header";
 
 const AppUI = (data) => {
- return(
-  <React.Fragment>
-    {console.log(data)}
-    <Header />
-    <CreatePostButton />
-    <UserPostSearch />
-    <FilterPosts />
-    <PostsList>
-      <SinglePost />
-      <SinglePost />
-      <SinglePost />
-      <SinglePost />
-    </PostsList>
-  </React.Fragment>
- )
+
+  const data2 = data.data
+  const imageAPI = 'url("https://source.unsplash.com/random")'
+
+  return(
+    <React.Fragment>
+      {console.log(data2)}
+      <Header />
+      <CreatePostButton />
+      <UserPostSearch />
+      <FilterPosts />
+      <PostsList>
+        {data2.map(post =>
+        <SinglePost 
+          key={post.id}
+          title={post.title}
+          description={post.body}
+          image={imageAPI}
+        />
+        )}
+      </PostsList>
+    </React.Fragment>
+  )
 }
 
 export { AppUI }

@@ -6,9 +6,10 @@ import { SinglePost } from "../SinglePost";
 import { FilterPosts } from "../FilterPosts";
 import { Header } from "../Header";
 
-const AppUI = () => {
+const AppUI = (data) => {
  return(
   <React.Fragment>
+    {console.log(data)}
     <Header />
     <CreatePostButton />
     <UserPostSearch />

@@ -1,0 +1,27 @@
+.header-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 48px 12px;
+}
+.header-title {
+  text-align: center;
+  font-size: 48px;
+  padding: 18px 0 0 0;
+  margin: 0;
+}
+.subtitle-container {
+  display: flex;
+  align-items: center;
+}
+.header-subtitle {
+  text-align: center;
+  font-weight: 500;
+  padding: 0;
+  margin: 0;
+  color: var(--orange-brand);
+}
+.subtitle-special {
+  font-size: 34px;
+}

@@ -3,14 +3,16 @@ import './FilterPosts.css';
 
 const FilterPosts = () => {
  return(
-  <ul>
-    <li>All</li>
-    <li>Travel</li>
-    <li>Lifetyle</li>
-    <li>Business</li>
-    <li>Food</li>
-    <li>Work</li>
-  </ul>
+  <nav>
+    <ul className="filter-container">
+      <li className="filter-item">All</li>
+      <li className="filter-item">Travel</li>
+      <li className="filter-item">Lifetyle</li>
+      <li className="filter-item">Business</li>
+      <li className="filter-item">Food</li>
+      <li className="filter-item">Work</li>
+    </ul>
+  </nav>
  )
 }
 

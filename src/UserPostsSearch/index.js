@@ -3,11 +3,14 @@ import './UserPostSearch.css'
 
 const UserPostSearch = () => {
  return(
-  <div>
-    <p>
-      Sort post by User
+  <div className="serch-by-user-container">
+    <p className="input-description">
+      Sort posts by user
     </p>
-    <input />
+    <input 
+      className="input-field"
+      placeholder="Username"
+    />
   </div>
  )
 }

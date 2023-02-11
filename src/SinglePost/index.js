@@ -3,31 +3,31 @@ import './SinglePost.css'
 
 const SinglePost = (props) => {
  return(
-  <li>
-    <h2
-      className='post-title'
-    >
-      Title
+  <li className="preview-post-container">
+    <h2 className="post-title">
+      Post Title
     </h2>
 
-    <p>
+    <p className="comments-counter">
       Number of Comments
     </p>
 
-    <p>
+    <p className="post-description">
       Post Description
     </p>
 
-    <h5>
-      Category
-    </h5>
+    <div className="category-delete-container">
+      <h5 className="post-category">
+        Category
+      </h5>
 
-    <span 
-      className='delete-post-button'
-      /* onClick={props.onDelete} */
-    >
-      Delete
-    </span>
+      <span 
+        className='delete-post-button'
+        /* onClick={props.onDelete} */
+      >
+        Delete Post
+      </span>
+    </div>
   </li>
  )
 }

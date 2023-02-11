@@ -1,0 +1,15 @@
+.create-post-button {
+  position: fixed;
+  top: 200px;
+  right: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background-color: var(--orange-brand);
+  color: #ffffff;
+  font-size: 48px;
+  cursor: pointer;
+}

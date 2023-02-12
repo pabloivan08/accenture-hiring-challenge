@@ -1,7 +1,20 @@
 import React from "react";
 import './SinglePost.css'
 
-const SinglePost = ({title, image, description, userId}) => {
+function deletePost(id) {
+  fetch(`https://jsonplaceholder.typicode.com/posts/${id}`, {
+    method: 'DELETE'
+  })
+    .then(res => res.json())
+    .then(data => {
+      console.log(data);
+    })
+    .catch(err => {
+      console.error(err);
+    });
+}
+
+const SinglePost = ({title, image, description, userId, id}) => {
 
   const randomImage = { backgroundImage: image }
 
@@ -26,7 +39,7 @@ const SinglePost = ({title, image, description, userId}) => {
 
         <span 
           className='delete-post-button'
-          /* onClick={props.onDelete} */
+          onClick={() => deletePost(id)}
         >
           Delete Post
         </span>

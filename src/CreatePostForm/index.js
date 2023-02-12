@@ -1,7 +1,7 @@
 import React from "react";
 import './CreatePostForm.css'
 
-const CreatePostForm = () => {
+const CreatePostForm = ({setOpenModal}) => {
   return(
     <form formAction="" className="form-container">
       <h3>Create new post</h3>
@@ -22,7 +22,13 @@ const CreatePostForm = () => {
         <input id="image-url" type="text" />
       </label>
       <button type="submit" className="submit-button">Post</button>
-      <button type="submit" className="cancel-button">Cancel</button>
+      <button 
+        type="submit" 
+        className="cancel-button"
+        onClick={() => setOpenModal(prevState => !prevState)}
+      >
+        Cancel
+      </button>
     </form>
   )
 }

@@ -1,25 +1,17 @@
 import React from "react";
-import './SinglePost.css'
+import './SinglePost.css';
 
-function deletePost(id) {
-  fetch(`https://jsonplaceholder.typicode.com/posts/${id}`, {
-    method: 'DELETE'
-  })
-    .then(res => res.json())
-    .then(data => {
-      console.log(data);
-    })
-    .catch(err => {
-      console.error(err);
-    });
-}
+const SinglePost = ({title, description, userId, id}) => {
 
-const SinglePost = ({title, image, description, userId, id}) => {
-
-  const randomImage = { backgroundImage: image }
+  const imageAPI = 'url("https://source.unsplash.com/random")'
+  const randomImage = { backgroundImage: imageAPI }
 
   return(
-    <li className="preview-post-container" style={randomImage}>
+    <li 
+      className="preview-post-container" 
+      style={randomImage}
+
+    >
       <h2 className="post-title">
         {title}
       </h2>
@@ -40,13 +32,11 @@ const SinglePost = ({title, image, description, userId, id}) => {
         <div>
           <span 
             className='delete-post-button'
-            onClick={() => deletePost(id)}
           >
             Edit
           </span>
           <span 
             className='delete-post-button'
-            onClick={() => deletePost(id)}
           >
             Delete
           </span>

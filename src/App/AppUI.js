@@ -17,9 +17,6 @@ const AppUI = (data) => {
 
   let serachedValue = []
   !searchedUser > 0 ? serachedValue = newData : serachedValue = newData.filter(post => post.userId == searchedUser)
- 
-  const imageAPI = 'url("https://source.unsplash.com/random")'
-
   
   return(
     <React.Fragment>
@@ -40,13 +37,14 @@ const AppUI = (data) => {
           userId={post.userId}
           title={post.title}
           description={post.body}
-          image={imageAPI}
         />
         )}
       </PostsList>
       {!!openModal &&
         <Modal>
-          <CreatePostForm />
+          <CreatePostForm 
+            setOpenModal={setOpenModal}
+          />
         </Modal>
       }
     </React.Fragment>

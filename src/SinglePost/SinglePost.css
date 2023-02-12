@@ -31,12 +31,12 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding-top: 14px;
 }
 .post-category {
   text-transform: uppercase;
   letter-spacing: 2px;
   margin: 0;
-  padding-top: 14px;
 }
 .delete-post-button {
   background-color: var(--orange-brand);

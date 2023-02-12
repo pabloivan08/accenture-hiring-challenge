@@ -37,12 +37,20 @@ const SinglePost = ({title, image, description, userId, id}) => {
           Category
         </h5>
 
-        <span 
-          className='delete-post-button'
-          onClick={() => deletePost(id)}
-        >
-          Delete Post
-        </span>
+        <div>
+          <span 
+            className='delete-post-button'
+            onClick={() => deletePost(id)}
+          >
+            Edit
+          </span>
+          <span 
+            className='delete-post-button'
+            onClick={() => deletePost(id)}
+          >
+            Delete
+          </span>
+        </div>
       </div>
     </li>
  )
